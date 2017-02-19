@@ -18,3 +18,16 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+$(document).ready(function() {
+
+    // For the Second level Dropdown menu, highlight the parent
+    $( ".dropdown-menu" )
+        .mouseenter(function() {
+            $(this).parent('li').addClass('active');
+        })
+        .mouseleave(function() {
+            $(this).parent('li').removeClass('active');
+        });
+
+});

@@ -19,8 +19,8 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
     <![endif]-->
 
 </head>
@@ -46,7 +46,7 @@
 
         <ul class="nav navbar-top-links navbar-right">
 
-            <li class="dropdown">
+            <li class="dropdown active" >
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
@@ -65,8 +65,8 @@
         </ul>
         <!-- /.navbar-top-links -->
 
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
+        <div class="navbar-nav sidebar" role="navigation">
+            <div class="sidebar-nav collapse navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li class="sidebar-search">
                         <div class="input-group custom-search-form">
@@ -86,12 +86,12 @@
                         <a href="#">
                             <i class="fa fa-wrench fa-fw"></i>
                             Users<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
+                        <ul class="nav nav-second-level" id="side-menu">
                             <li>
-                                <a href="panels-wells.html">All Users</a>
+                                <a href="{{route('users.index')}}">All Users</a>
                             </li>
                             <li>
-                                <a href="buttons.html">Create User</a>
+                                <a href="{{route('users.create')}}">Create User</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -103,7 +103,7 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">All Posts</a>
+                                <a href="/posts">All Posts</a>
                             </li>
                             <li>
                                 <a href="buttons.html">Create Post</a>

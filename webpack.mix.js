@@ -17,6 +17,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
 mix.combine([
     'resources/assets/css/bootstrap.css',
+    'resources/assets/css/style.css',
     'resources/assets/css/blog-post.css',
     'resources/assets/css/metisMenu.css',
     'resources/assets/css/font-awesome.min.css',
@@ -25,6 +26,7 @@ mix.combine([
 
 
 mix.js([
+    'resources/assets/js/app.js',
     'resources/assets/js/jquery.js',
     'resources/assets/js/bootstrap.js',
     'resources/assets/js/metisMenu.js',

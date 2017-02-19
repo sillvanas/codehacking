@@ -1,102 +1,23 @@
-@font-face {
-  font-family: 'untash';
-  src: url('../fonts/untash.eot?#') format('eot'),
-  url('../fonts/untash.ttf') format('truetype'),
-  url('../fonts/untash.woff') format('woff');
-}
 
-body{
-  color:gray;
-  font-family:untash;
-  background-color: #f1f1f1;
-  line-height: 2;
-}
-.alert{
-  border-radius: 0px;
-  border: none;
-  border-right: 10px solid transparent;
-  color: #333;
-  background-color: #fff;
-}
-.alert-success {
-    border-color: #7bb606;
-}
-.alert-info {
-    border-color: #2196f3;
-}
-.alert-warning {
-    border-color: #ffeb3b;
-}
-.alert-danger {
-    border-color: #f44336;
-}
-.list-group.news .mini-image img{
-  width:100%;
-    max-width: 150px;
-}
-.list-group.news .mini-image{
-  float:right;
-  margin-left: 15px;
-  -webkit-filter: grayscale(0);   /*in baese taghir rang az range asli be be khakestar mishavad */
-  filter: grayscale(0);
+.dropdown-submenu {
   position: relative;
 }
-.list-group-item:hover .mini-image{
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
 }
-.list-group.news .mini-image .icon{
-  font-size:50px;
-  position: absolute;
-  top:50%;
-  margin-top: -50px;
-  left:50%;
-  margin-left: -25px;
-  color:#fff;
-  display: none;
-}
-.list-group.news .list-group-item:hover .mini-image  .icon{
+.dropdown-submenu:hover > .dropdown-menu {
   display: block;
 }
-.list-group-item {
-  min-height: 120px;
-  border-radius: 4px;
-  margin-bottom: 15px;
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff;
 }
-.list-group-item .rating{
-  text-align: left;
+.dropdown-submenu.pull-left {
+  float: none;
 }
-.list-group-item .rating .icon{
-  font-size: 18px;
-  color:#ffeb3b;
-}
-.list-group-item .rating .icon.star-1:hover:before {    /* hover be manaye raftan mouse bar roye mohtavast  */
-  font-family: "streamline-filled" !important;
-}
-.list-group-item-text {
-    line-height: 2;
-}
-.panel .panel-body{
-  display: block;
-  padding: 0px ;
-  text-align: justify;
-}
-.panel .panel-body h4{
-  text-align: left;
-  color: green;
-}
-
-.panel .panel-body img{
-  width: 100%;
-}
-
-.panel .panel-body>*:not(img){
-  padding: 0px 15px;
-}
-
-
-.label + .label {
-  border: 5px solid green;
-
-
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
 }

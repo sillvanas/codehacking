@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -12462,7 +12462,7 @@ if (typeof jQuery === 'undefined') {
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
+/* WEBPACK VAR INJECTION */(function($) {
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -12477,24 +12477,25 @@ __webpack_require__(1);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(9));
+Vue.component('example', __webpack_require__(4));
 
 var app = new Vue({
-  el: '#app'
+    el: '#app'
 });
 
-/***/ }),
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
-/***/ (function(module, exports) {
+$(document).ready(function () {
 
-// removed by extract-text-webpack-plugin
+    // For the Second level Dropdown menu, highlight the parent
+    $(".dropdown-menu").mouseenter(function () {
+        $(this).parent('li').addClass('active');
+    }).mouseleave(function () {
+        $(this).parent('li').removeClass('active');
+    });
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 8 */
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12523,14 +12524,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 };
 
 /***/ }),
-/* 9 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(10)(
+var Component = __webpack_require__(5)(
   /* script */
-  __webpack_require__(8),
+  __webpack_require__(3),
   /* template */
-  __webpack_require__(11),
+  __webpack_require__(6),
   /* scopeId */
   null,
   /* cssModules */
@@ -12557,7 +12558,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 10 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = function normalizeComponent (
@@ -12610,7 +12611,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 11 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -12639,12 +12640,23 @@ if (false) {
 }
 
 /***/ }),
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 12 */,
-/* 13 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(7);
+module.exports = __webpack_require__(11);
 
 
 /***/ })
