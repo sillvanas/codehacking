@@ -1,8 +1,11 @@
 @extends('layouts/admin')
 
+<link href="{{asset('css/libs.css')}}" rel="stylesheet">
+<script src="{{asset('js/libs.js')}}"></script>
 
 
 @section('content')
+
 
     <h1>{{$user->name}}</h1>
     <br>
@@ -45,16 +48,28 @@
             {!! Form::file('photo_id'  , ['class'=>'form-control']) !!}
         </div>
 
-        <div class="form-group">
+
+        <div class="form-group" >
             {!! Form::label('password' ,'Password :') !!}
             {!! Form::password('password',null, ['class'=>'form-control']) !!}
         </div>
 
 
-        <div class="form-group">
+        <div class="form-group" style="position: absolute;">
             {!! Form::submit('create user !' , ['class'=>'btn btn-primary']) !!}
         </div>
         {!! Form::close() !!}
+
+
+        {!! Form::open(['method'=>'delete' , 'action'=>['AdminUsersController@destroy',$user->id]]) !!}
+
+            <div class="form-group pull-right" style="margin-right: 15%; margin-bottom: 10%;">
+              {!! Form::submit('Delete user !' , ['class'=>'btn btn-danger']) !!}
+            </div>
+        {!! Form::close() !!}
+
+
+
 
     </div>
     </div>

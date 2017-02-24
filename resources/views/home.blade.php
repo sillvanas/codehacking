@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<script src="{{asset('js/libs.js')}}"></script>
 
 @section('content')
 <div class="container">

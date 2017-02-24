@@ -1,11 +1,14 @@
 @extends('layouts/admin')
 
-<link href="{{asset('css/app.css')}}" rel="stylesheet">
-<link href="{{asset('css/libs.css')}}" rel="stylesheet">
-
 
 @section('content')
 
+    @if(Session::has('deleted_user'))
+
+        <p class="bg bg-danger">{{Session('deleted_user')}}</p>
+
+
+        @endif
     <h1>user</h1>
 
 
@@ -51,8 +54,6 @@
         </tbody>
     </table>
 
-
-    <script src="{{asset('js/libs.js')}}"></script>
 @stop
 
 
